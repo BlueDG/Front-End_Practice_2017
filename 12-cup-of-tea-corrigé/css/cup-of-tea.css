@@ -1,0 +1,633 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Amaranth', sans-serif;
+}
+
+.container{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+
+/************************ 1.0 HEADER ************************/
+.header-main{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #95b10f;
+    text-align: center;
+    position: relative;
+}
+.message{
+    background-color: rgba(0, 0, 0, 0.08);
+    margin: 0;
+    color: white;
+    font-size: 0.7rem;
+    padding: 10px;
+}
+.shop-cart{
+    position: absolute;
+    left: -20px;
+    top: 40px;
+    border-radius: 30px;
+    padding: 5px 10px 5px 20px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.shop-cart:hover{
+    transform: scale(0.9);
+}
+.shop-cart i{
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    padding: 5px;
+    margin: 5px;
+}
+.cart{
+    display: none;
+}
+@keyframes logobounce{
+    0%{
+        transform: scale(1);
+    }
+    
+    100%{
+        transform: scale(1.15) translateY(-5px);
+        opacity: 0.7;
+    }
+}
+.logo{
+    margin-top: 60px;
+}
+.logo:hover{
+    animation-name: logobounce;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+/*********************** 1.1 NAV-MAIN ************************/
+.nav-main{
+    /*margin-top: 60px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-main a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px;
+    font-size: 1.2rem;
+    transition: all 300ms;
+}
+.ribbon{
+    display: none;
+}
+
+/************************ 2.0 MAIN ************************/
+    .main-product{
+        max-width: 800px;
+        background-color: white;
+        padding: 20px;
+    }
+/************************ 2.1 CHRISMAS ************************/
+.chrismas{
+    display: none;
+}
+/************************ 2.2 CHOICE ************************/
+.choice{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
+}
+.title-tea{
+    width: 100%;
+    text-align: center;
+    color: #8eb10d;
+    font-weight: normal;
+}
+.choice-item{
+    text-align: center;
+    width: 50%;
+    transition: all 250ms;
+}
+.choice-item:hover{
+    transform: scale(1.1);
+    
+}
+.tea-name{
+    transition: all 250ms;
+}
+
+/************************ 2.3 SPECIAL ************************/
+.special{
+    background-color: white;
+    padding: 20px;
+}
+.tea-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0;
+    transition: all 250ms;
+    padding: 10px;
+}
+
+.price{
+    display: block;
+    font-size: 1.8rem;
+    margin: 0;
+}
+.cta{
+    display: inline-block;
+    background-color: #b09067;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 200px;
+    transition: all 300ms;
+    
+}
+.tea-item img{
+    width: 287px;
+    transition: all 300ms;
+}
+/************************ Listing ************************/
+.product-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+}
+.product-item .title-tea {
+    text-align: left;
+    margin-bottom: 0;
+}
+.image-tea{
+    display: none;
+}
+.product-item .tea-item{
+    margin: 0 0 10px 0;
+}
+/************************ ABOUT ************************/
+.main-about{
+    background-color: white;
+    padding: 20px;
+}
+
+.title-about{
+    font-size: 2.5rem;
+}
+.team img{
+    width: 100%;
+}
+.team .title-tea{
+    text-align: left;
+}
+.concept-plus{
+    background-color: #eaefcf;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.concept-plus-item{
+    text-align: center
+}
+.concept-plus .tea-name{
+    margin-top: 0;
+}
+.concept-icon{
+    width:120px;
+}
+/************************ PRODUCT ************************/
+.header-product{
+    text-align:center;
+}
+.ref{
+    font-size: 0.7rem;
+    font-style: italic;
+    font-family: 'Amaranth', sans-serif;
+}
+.notation ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.notation ul li{
+    margin: 5px;
+   
+}
+.notation ul li:last-of-type{
+    color: grey;
+}
+.notation a{
+    text-decoration: none;
+    color: #8eb10d;
+}
+
+.buy-item{
+    text-align: center;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add .cta {
+    margin: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+.whishlist{
+    text-decoration: none;
+    color: #8eb10d;
+}
+.whishlist i{
+    color: #e88577;
+}
+.add select{
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    /*background-image: url(../img/fleche.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;*/
+}
+.add form{
+    width: 100%;
+    max-width: 400px;
+}
+.add .price{
+    font-weight: bold;
+}
+.sale{
+    font-weight: bold;
+}
+/************************ 3.0 FOOTER ************************/
+.footer-main{
+    background-color: #96b011;
+    text-align: center;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom ;
+}
+.more{
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    list-style-type: none;
+    padding: 15px;
+}
+.more a{
+    display:flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-transform: uppercase;
+    color : rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    transition: all 200ms;
+}
+.more i{
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+.more a:hover{
+    color: white;
+    text-shadow: 0px 0px 15px lightgrey;
+    
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.footer-item ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.title-footer{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+.footer-item a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 6px;
+    transition: all 200ms;
+}
+
+.footer-item a:hover{
+    color: white;
+    text-shadow: 0px 0px 15px white;
+}
+.footer-3WA{
+    margin-top: 40px;
+}
+.footer-3WA img{
+    width: 60px;
+}
+
+/************************ Responsive Tablette ************************/
+
+@media screen and (min-width: 768px){
+    
+    .nav-main a:hover{
+        text-shadow: 2px 5px 15px black;
+        transform: scale(1.03) translateY(-2px);
+    }
+    .message{
+        font-size: 0.9rem;
+    }
+    .shop-cart{
+        position: static;
+        padding: 0;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .shop-cart i{
+        color: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        font-size: 1.1rem;
+        padding: 5px;
+        margin: 5px;
+    }
+    .cart{
+        display: inline;
+    }
+    
+    .flex-banner{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .flex-banner img{
+        width: 150px;
+    }
+    .logo {
+        margin-top:0;
+    }
+    .nav-main{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .nav-main a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        margin:15px 0;
+        font-size: 1.2rem;
+    }
+    .ribbon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 90px;
+        display: inline-block;
+        z-index: 10;
+    }
+    
+    .chrismas{
+        display: block;
+    }
+    .chrismas img{
+        width: 100%;
+    }
+
+    .title-chrismas{
+        width: 100%;
+        text-align: center;
+        color: #8eb10d;
+        font-size: 2.5rem;
+    }
+    .promo{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .cta:hover{
+        background-color: rgba(176, 144, 103, 0.6);
+        cursor: pointer;
+    }
+    
+    .more{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content:space-around;
+    }
+    .more a{
+        width: auto;
+    }
+    
+    .about-item img{
+        width: 50%;
+        float: left;
+        margin: 0 15px 5px 0;
+    }
+    .about-item:nth-of-type(2n) img{
+        float: right;
+        margin: 0 0 5px 15px;
+    }
+    .header-product{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .product-id{
+        text-align: left;
+    }
+    
+    .notation ul {
+       
+        flex-direction: row-reverse;
+      
+}
+    
+    .notation li:hover{
+        color: gold;
+    }
+    .notation li:hover ~ li{
+        color: gold;
+    }
+    
+    .buy-item{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .add{
+        align-items: flex-end;
+    }
+    .add .cta{
+        margin-top: 50px;
+        margin-right: 0;
+        padding: 5px 25px;
+    }
+    .whishlist{
+        font-size: 0.8rem;
+    }
+    .footer-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer-item{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        color: white;
+        width: 30%;
+    }
+    .title-footer{
+        font-size: 1.3rem;
+    }
+    .footer-item a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 6px;
+    }
+    
+}
+/************************ Responsive Desktop ************************/
+@media screen and (min-width: 1024px){
+    .choice{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        transition: all 300ms;
+    }
+    .choice:hover .choice-item{
+        opacity: 0.5;
+    }
+    .choice .choice-item:hover{
+        opacity: 1;
+    }
+    .choice-item:hover .tea-name{
+        color: #8eb10d;
+        transform: scale(1.1);
+        text-shadow: 0px 5px 15px grey;
+    }
+    .choice-item:hover{
+        transform: scale(1.1);
+        
+    }
+    .choice-item{
+        width: 20%;
+    }
+    
+    .special{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .tea-item{
+        width: 30%;
+        justify-content: center;
+    }
+    /*.tea-item:hover{
+        box-shadow: 0px 5px 20px 0 grey;
+    }*/
+    
+    /*.tea-item:hover img{
+       opacity:0.8;
+    }*/
+    .tea-item .p-price{
+        margin-top: auto;
+    }
+    
+    .product-item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .intro-item{
+        width: 100%;
+        margin: 20px;
+    }
+    .intro-item img{
+        margin-top: 25px;
+    }
+    .image-tea{
+        display: initial;
+        float: left;
+        width: 150px;
+        
+    }
+    
+    .about-item img{
+        max-width: 450px;
+    }
+    .concept-plus{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .concept-plus-item{
+        width: 30%;
+        text-align: center
+    }
+    .concept-plus .tea-name{
+        margin-top: 0;
+    }
+    .concept-icon{
+        width:120px;
+    }
+}

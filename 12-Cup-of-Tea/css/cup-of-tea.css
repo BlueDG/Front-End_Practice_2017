@@ -1,0 +1,894 @@
+/*https://stanislas-aubert-live-09-stanaubert.c9users.io/integration/12-cup-of-tea/about.html*/
+/*https://guillaume-dusseux-live-09-guillaumedg.c9users.io/integration/12-Cup-of-Tea/about.html*/
+
+/************************************** General rules *****************************************************/
+/* amaranth */
+/* open sans */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    margin: 0; 
+    font-family: "Open Sans", sans-serif;
+    color: #666; 
+    line-height: 1.4; 
+    background-color: #f2f2f2;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.selected-page{
+    padding: 10px 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/************************************** header *****************************************************/
+
+@keyframes edouard{
+    
+    0%{
+        font-size: 2rem;
+        color: red;
+    }
+    
+    100%{
+        font-size: 4rem ;
+        opacity: 0.5;
+    }
+    
+    
+}
+
+/*h1{
+    /*animation-name: edouard;*/
+    /*animation-duration: 3s;
+    animation-fill-mode: forwards;/*backwards*/ /* forwards bloque l'animation à 100% */
+    /*animation-direction: alternate;
+    animation-iteration-count: 2; /*infinite*/
+    /*animation-delay: 2s;
+    
+}*/
+
+
+
+@keyframes logobounce{
+    0%{
+        
+    }
+    
+    100%{
+        
+        transform: scale(1.2) translateY(-10px);
+    }
+}
+
+.logo:hover{
+    animation-name: logobounce;
+    animation-duration: 300ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.logo{
+    margin-top: 75px;
+}
+
+
+.header{
+    background-image: url(../img/bg.jpg);
+    /*background-size: cover;*/ /*on enlève ça pour faire plus joli avec background color*/
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #97b00e;
+}
+
+.ribbon{
+    display: none;
+}
+
+
+.message{
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0.5em;
+}
+
+.header-top{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.basket{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 0 40px 40px 0;
+}
+
+
+.basket span{
+    display: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.basket strong{
+    color: white;
+}
+
+.basket i{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0.7em;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.nav-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-main a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 1em 0;
+}
+
+
+
+
+/************************************** main *****************************************************/ 
+
+main{
+    background-color: white;
+    padding: 25px;
+}
+
+/************************************** section intro *****************************************************/ 
+
+
+.title-intro{
+    color: #97b00e;
+    text-align: center;
+    font-family: "Amaranth";
+    font-weight: normal;
+    width: 100%;
+}
+
+
+.small{
+        text-align: center;
+        display: block;
+            
+        }
+
+
+/************************************** section tea *****************************************************/ 
+
+
+
+.tea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-tea{
+    color: #97b00e;
+    text-align: center;
+    font-family: "Amaranth";
+    font-weight: normal;
+    /**/
+    width: 100%;
+}
+
+
+.tea-types{
+    width: 50%;
+    text-align: center;
+}
+
+
+.tea-names{
+    font-family: "Amaranth";
+    font-weight: normal;
+    color: #676881;
+}
+
+
+/************************************** section selections *****************************************************/ 
+
+
+.selections{
+    
+}
+
+
+.selection-item{
+    text-align: center;
+}
+
+.selection-item img{
+    width: 100%; /* pour réguler une largeur identique aux images, on donne 100% de façon à prendre toute la largeur du parent, à savoir ici selection-item */
+    
+}
+
+.tea-name{
+    color: #676881;
+    font-family: "Amaranth";
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+
+.selection-item h3{
+    color: #97b00e;
+    font-family: "Amaranth";
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.selection-item h4{
+    font-family: "Amaranth";
+    font-weight: normal;
+    color: #676881;
+    font-size: 1.17em;
+    text-align: center;
+}
+
+
+.selection-item p{
+}
+
+.price{
+    font-weight: bold;
+    display: block;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.cta{
+    margin: 20px;
+    padding: 24px;
+    background-color: #b09067;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+/************************************** ABOUT *****************************************************/
+
+.team .title-tea{
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.title-about{
+    font-family: "Amaranth";
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+
+.fondateur{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+.fondateur img{
+    width: 100%;
+}
+
+.conceptPlus{
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #eaefcf;
+    padding: 30px;
+}
+
+.conceptPlusItem{
+    text-align: center;
+    padding: 15px;
+}
+
+.conceptPlus img{
+    width: 120px;
+}
+
+/************************************** PRODUCTS *****************************************************/
+
+.header-product{
+    text-align:center;
+}
+.ref{
+    font-size: 0.7rem;
+    font-style: italic;
+    font-family: 'Amaranth', sans-serif;
+}
+.notation ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.notation ul li{
+    margin: 5px;
+   
+}
+.notation ul li:last-of-type{
+    color: grey;
+}
+.notation a{
+    text-decoration: none;
+    color: #8eb10d;
+}
+
+.buy-item{
+    text-align: center;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add .cta {
+    margin: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+.whishlist{
+    text-decoration: none;
+    color: #8eb10d;
+}
+.whishlist i{
+    color: #e88577;
+}
+.add select{
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    /*background-image: url(../img/fleche.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;*/
+}
+.add form{
+    width: 100%;
+    max-width: 400px;
+}
+.add .price{
+    font-weight: bold;
+}
+.sale{
+    font-weight: bold;
+}
+
+
+/************************************** LISTING *****************************************************/
+
+.product-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+}
+.product-item .title-tea {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.image-tea{
+    display: none;
+}
+.product-item .tea-item{
+    margin: 0 0 10px 0;
+}
+
+.tea-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0;
+    transition: all 250ms;
+    padding: 10px;
+}
+
+.p-price{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+/************************************** footer *****************************************************/
+
+
+.footer{
+   background-image: url(../img/bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #97b00e;
+    margin-top: 40px;
+}
+
+.list-footer{
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    flex-wrap: wrap;
+    
+}
+
+
+
+
+.list-footer li{
+    color: rgba(255, 255, 255, 0.5);
+    list-style-type: none;
+    margin: 20px;
+}
+
+
+
+.list-footer a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.list-footer p{
+    
+}
+
+
+
+.div-footer{
+    text-align: center;
+}
+
+
+
+
+.section-footer{
+   
+}
+
+
+.section-footer ul{
+    padding: 0;
+}
+
+.section-footer li{
+    color: rgba(255, 255, 255, 0.5);
+    list-style-type: none;
+    margin: 20px;
+}
+
+
+
+.section-footer p{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+
+
+.footer-title{
+    color: white;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+
+
+.footer-end{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 25px;
+}
+
+.footer-end img{
+    width: 60px;
+}
+
+
+
+/************************************** CHECKOUT ************************************************/
+
+.checkout{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: -110%;
+    /* z-index: -10;*/
+    z-index: 1000;
+    width: 100vw; /* 100 viewport width*/
+    height: 100vh; /* 100 viewport height*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: 0;
+    transition: all 500ms; /* juste sur l'opocité pas sur l'index*/
+    
+}
+
+.is-showing{
+    opacity: 1;
+    z-index: 100;
+    left: 0;
+}
+
+.checkout-inner{
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    padding: 30px;
+    position: relative;
+    border: 4px solid #8eb10d;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.checkout-close{
+    background-color: white;
+    border: 0;
+    border: 4px solid #8eb10d;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 50px; /* les icones sont du texte et vu qu'il ya héritage, on peut taper dans l'icone ici */
+    color: #8eb10d;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    padding: 0;
+    
+}
+
+
+.checkout-close i{
+    
+}
+
+.checkout-title{
+    color: #8eb10d;
+    font-size: 40px;
+}
+
+.checkout-button{
+    font-size: 2rem; /* 32px */
+    color: #8eb10d;
+    background-color: white;
+    padding: 0.5em; /* 16px */
+    -webkit-appearance: none;
+    border: 2px solid #8eb10d;
+    outline: none;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+
+/************************************** responsive tablette *****************************************************/
+
+
+@media screen and (min-width: 768px){
+    
+    
+    .selected-page{
+    background-color: transparent;
+    padding: 0;
+}
+    
+    .header-top{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+}
+    
+   
+    .container2{
+            width: 75%;
+            margin-right:auto;
+            margin-left: auto;
+            max-width: 1200px;
+        }
+
+    
+    .basket{
+        position: initial;
+        box-shadow: none;
+        padding: 10px;
+        border-radius: 0;
+}
+ 
+    .nav-main{
+    flex-direction: row;
+    justify-content: space-between;
+}  
+
+
+    .basket span{
+    display: initial;
+}
+
+    .logo{
+        margin-top: 0px;
+    }
+    
+    .ribbon{
+        display: initial;
+        width: 90px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    
+    
+    .fondateur img{
+        float: left;
+        width: 50%;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+
+    .fondateur:nth-of-type(2n) img{
+        float: right;
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    
+
+     .product-id{
+        text-align: left;
+    }
+    
+    .notation ul {
+       
+        flex-direction: row-reverse;
+      
+}
+    
+    .notation li:hover{
+        color: gold;
+    }
+    .notation li:hover ~ li{
+        color: gold;
+    }
+    
+    .buy-item{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .add{
+        align-items: flex-end;
+    }
+    .add .cta{
+        margin-top: 50px;
+        margin-right: 0;
+        padding: 5px 25px;
+    }
+    .whishlist{
+        font-size: 0.8rem;
+    }
+
+    .header-product{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    .list-footer{
+        flex-wrap: nowrap;
+        
+    }
+    
+    
+    .list-footer li{
+        color: rgba(255, 255, 255, 0.5);
+        list-style-type: none;
+        margin: 20px;
+    }
+    
+    
+    
+    .list-footer a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    
+    
+    .list-footer p{
+        
+    }
+    
+    
+    
+    .div-footer{
+        text-align: center;
+        display: flex;
+    }
+    
+    
+    
+    
+    .section-footer{
+       width: 33.33%;
+       flex-direction: row;
+    }
+    
+    
+    .section-footer ul{
+        padding: 0;
+    }
+    
+    .section-footer li{
+        color: rgba(255, 255, 255, 0.5);
+        list-style-type: none;
+        margin: 20px;
+    }
+    
+    
+    
+    .section-footer p{
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 0;
+    }
+    
+    
+    
+    .footer-title{
+        color: white;
+        text-transform: uppercase;
+        margin-top: 45px;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/************************************** responsive Desktop  *****************************************************/
+
+
+    @media screen and (min-width: 1024px){
+        
+        
+        .container{
+            width: 75%;
+            margin-right:auto;
+            margin-left: auto;
+            max-width: 1200px;
+        }
+        
+        .intro small{
+            text-align: center;
+            padding: 20px;
+            
+        }
+        
+        
+        .image-tea{
+            display: initial;
+            float: left;
+        }
+        
+        .tea{
+            
+            
+        }
+        
+        
+        
+        .title-tea{
+            
+        }
+        
+        
+        
+        .tea-types{
+            width: 20%;
+        }
+        
+        
+        
+        .selections{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            justify-content: space-between; /* soit on utilise un padding sur l'item pour écarter les articles soit on vise le parent comme selections puis on ajoute space-between */ 
+            /*  c'est la classe container qui s'occupe des marges de gauche et droite */
+            
+        }
+        
+        
+        
+        .selection-item{
+            width: 29%;
+            display: flex; /* faire du flex dans du flex pour gérer ce qu'il y a dedans*/
+            flex-direction: column;
+            align-items: center; /* pour ne pas strech les images*/
+            /*padding: 25px;*/
+            
+        }
+        
+        
+        .price{
+            margin-top: auto;
+        }
+        
+        
+        
+        .conceptPlus{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .tea-item{
+        width:30%;
+    }
+    
+    .product-item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .intro-item{
+        width: 100%;
+        margin: 20px;
+    }
+    .intro-item img{
+        margin-top: 25px;
+    }
+        
+ }
+    
+    

@@ -1,0 +1,338 @@
+/* general rules */
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    margin: 0; 
+    font-family: "Open Sans", sans-serif;
+    color: #666; 
+    line-height: 1.4; 
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-family: Candal;
+}
+
+
+img{
+    max-width: 100%
+    
+}
+
+
+/* Header */
+
+
+.logo{
+    margin: 15px;
+}
+
+
+
+.nav-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.nav-main a img{
+    margin-bottom: 30px;
+}
+
+.nav-main a i{
+    margin-top: 30px;
+    
+}
+
+
+
+.nav-main a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1c4048;
+    font-family: Candal;
+   
+}
+
+
+
+.nav-main i{
+    color: #f88d9a;
+    margin: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+
+/* Partie Intro du Header*/ 
+
+
+.intro{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10% 5%;
+    /* min-height: 100vh; */
+    background-attachment: fixed;
+}
+
+
+.title-intro{
+    font-size: 30px;
+}
+
+.intro p{
+    font-size: 25px;
+}
+
+/* Partie Search du Header*/
+
+.title-search{
+    padding: 10px;
+    background-color: #fb8b9b;
+    color: white;
+    margin-top: 0;
+    font-family: "Open Sans";
+    padding-left: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+
+/* main */
+
+.container{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 70px;
+    
+}
+
+
+.title-section{
+    padding: 10px;
+    color: #1d404b;
+    padding: 20px;
+    font-size: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-style: dashed;
+    border-bottom: none;
+    border-color: #1d404b;
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+
+.solution-item, .host-item{
+    text-align: center;
+}
+
+.solution-item p, .host-item p{
+    text-align: left;
+}
+
+.solution-item i, .host-item i{
+    color: #fb8b9b;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.host-item .price{
+    text-align: center;
+    color: #fb8b9b;
+}
+
+
+.title-item{
+    color: #fb8b9b;
+    font-size: 18px;
+    margin-bottom: 35px;
+    margin-top: 40px;
+}
+
+
+
+
+
+/* footer */ 
+
+
+.nav-footer{
+    background-color: #213e4e;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+.nav-footer a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-family: Candal;
+}
+
+
+
+/* responsive */ 
+
+@media screen and (min-width: 1024px){
+
+
+.nav-main{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.solution, .host{
+   display: flex; 
+   flex-wrap: wrap; /* pour retourner à la ligne */ 
+   justify-content: space-between;
+}
+
+.title-section{
+    width: 100%;
+}
+
+.solution-item, .host-item{
+    width: 30%;
+}
+  
+  
+.nav-footer{
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}  
+    
+}
+
+/* mutualise css */ 
+
+
+/* Header */
+
+
+.logo{
+    margin: 15px;
+}
+
+
+
+.nav-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.nav-main a img{
+    margin-bottom: 30px;
+}
+
+.nav-main a i{
+    margin-top: 30px;
+    
+}
+
+
+
+.nav-main a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1c4048;
+    font-family: Candal;
+   
+}
+
+
+
+.nav-main i{
+    color: #f88d9a;
+    margin: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+
+/* Partie Intro du Header*/ 
+
+
+.intro{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10% 5%;
+    /* min-height: 100vh; */
+    background-attachment: fixed;
+}
+
+
+.title-intro{
+    font-size: 30px;
+}
+
+.intro p{
+    font-size: 25px;
+}
+
+/* Partie Search du Header*/
+
+.title-search{
+    padding: 10px;
+    background-color: #fb8b9b;
+    color: white;
+    margin-top: 0;
+    font-family: "Open Sans";
+    padding-left: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+
+/* main */
+
+
+
+
+
+
+.serveur{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

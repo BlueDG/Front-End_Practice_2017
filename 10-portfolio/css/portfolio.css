@@ -1,0 +1,411 @@
+/* General Rules */
+
+*{
+    border-sizing: border-box; /* le padding et la bordure ne s'ajoutent pas aux pixels de l'élément. */
+}
+
+html{
+    font-size: 100%; /* pour être sûr d'avoir une base de 16px */
+}
+
+body{
+    margin: 0; /* le margin 0 va servir à enlever la margin de base entre le bord de l'écran et le contenu */
+    background-image: url(../img/fond.png);
+    font-family: "Bree Serif", serif; /* police la plus utilisée sur la page */ 
+    color: #808080; /* couleur la plus commune */ 
+    line-height: 1.6; /* espacement entre les lignes cool de manière générale */ 
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/* Header */
+
+.nav-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-main a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #808080;
+    font-size: 1.5rem;
+}
+
+
+.logo{
+        width: auto;
+    }
+    
+    
+     .nav-main .logo{
+    flex-direction: row;
+}
+
+
+/* Main */
+
+main{
+    /* haut et bas puis droite et gauche, dégagement pas cher */
+    padding: 0 20px;
+}
+
+
+
+/* section intro */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background-image: url(../img/bg_header.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* l'image couvre le header mais attention ça dépassera*/
+    background-position: center bottom; /* ainsi l'image sera centrée et visée au bas */ 
+    align-items: center;
+    padding: 15% 50px;
+    font-size: 1.2rem;
+}
+
+.title-main{
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+
+.intro p{
+    /* X Y Flou Couleurs*/
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1), 2px 2px 0px rgba(0, 0, 0, 1);
+    /*background-color: rgba(0, 0, 0, 0.1)*/
+}
+
+
+
+.cta{
+    background-color: #f12c5c;
+    padding: 1em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    /*display: inline-block;*/ /*ça c'était avant donc maintenant flex sur parent*/
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* section skills  */
+
+
+.title-section{
+    color: #f12c5c;
+    font-size: 2.2rem;
+    font-weight: normal;
+    /*display: flex;*/
+    text-align: center;
+    /*flex-direction: column;*/
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.6em;
+}
+
+.title-section:before{
+    content: "-";
+    margin-right: 10px;
+}
+
+.title-section:after{
+    content: "-";
+    margin-left: 10px;
+}
+
+
+
+
+.skills{
+    /*display: flex;
+    text-align: center;
+    flex-direction: column;*/
+}
+
+
+.item-skill{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.amount{
+    
+}
+
+
+.title-skill{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0.3em;
+    color: #555;
+}
+
+
+
+
+
+/* section services */
+
+.services{
+   
+}
+
+
+.item-service{
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.services i{
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.1);
+    /*  70 et 70 histoire de faire un carré avant de le transform en rond */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+.title-service{
+    color: #f22b5c;
+}
+
+/* section jobs */
+
+
+.jobs{
+ 
+    
+}
+
+.item-job{
+    text-align: justify;
+    
+}
+
+
+.title-job{
+    color: #f22b5c;
+    
+}
+
+.title-job:after{
+    content:" :";
+}
+
+.item-job img{
+    width: 100%;
+    
+}
+
+.cta-job{
+     color: #f22b5c;
+     margin-left: 40px;
+     text-decoration: none;
+}
+
+
+
+/* Contact */
+
+form{
+    text-align: center;
+}
+
+
+input, textarea{
+    width: 100%; /* les cases du formulaire feront tout l'écran */
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* on les espace */ 
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    background-color: transparent; /* pour voir ce qui a derrière  */ 
+    border-radius: 50px;
+    outline: none;
+    transition: all 300ms;
+}
+
+input:focus, textarea:focus{
+    border-color: lightpink;
+}
+
+
+input[type=submit]{ /*ça permet de viser le type */
+    background-color: #f22b5c;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    text-transform: uppercase;
+    width: auto;
+    cursor: pointer;
+   
+}
+
+input[name=prenom]{
+    background-image: url(../img/bg_form_name.svg);
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: 5px center;
+    padding-left: 55px;
+}
+
+
+
+
+/* Responsive */
+
+@media screen and (min-width: 768px){
+  
+  .nav-main{
+    flex-direction: row;
+    justify-content: center;
+    /* c'est row de base donc c'est un prblm il faut mettre le logo en haut. donc il faut le mettre en wrap pour autoriser le retour à la ligne */
+    flex-wrap: wrap;
+    }
+
+    .nav-main a{
+        margin: 15px;
+    }
+/* ça permet de mettre le logo en haut */
+/* le a est à 100% et pousse les autres a en prenant toute la largeur de l'écran*/
+    .logo{
+        width: 100%;
+        
+    }
+
+
+/* ça permet de mettre le logo en petite taille convenable*/
+/* ce truc img permet de toucher seulement la photo*/
+    .logo img{
+        width: 100px;
+    }
+    
+/* section job*/
+    
+    .jobs{
+        
+    }
+    
+    
+    .item-job{
+        text-align: justify;
+        clear: both;
+        overflow: hidden;
+    }
+    
+    .item-job img{
+        float: right;
+        width: 300px;
+        margin: 0 0 10px 40px;
+    
+    }
+    
+    /* de droite à gauche je lis je veux viser l'image qui est dans le 2ème article*/
+    .item-job:nth-of-type(2n) img{
+        float: left;
+        margin: 0 40px 10px 0px;
+    }
+    
+}
+
+/* desktop */
+
+@media screen and (min-width: 1024px){
+    
+    /* container est créé pour que le contenu ne touche pas les bords de l'écran */ 
+    .container{
+       width: 90%;
+       /* l'auto réparti de manière équitable les 5% restants*/
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 900px;
+    }
+    
+    .nav-main{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+    }
+    
+    .nav-main .logo{
+        width: auto;
+        margin-right: auto;
+        
+    }
+
+
+.nav-main i{
+        transition: all 300ms;
+    }
+    
+    .nav-main a:hover i{
+        transform: translateY(-10px);
+    }
+    
+    
+    .logo img{
+        width: 100px;
+        transition: 300ms; /* si hover ou autre alors transition au démarrage */
+        
+    }
+    
+    
+
+    .nav-main .logo:hover img{
+        transform: scale(1.2);
+        margin-right: 15px;
+    }
+
+    .section-flex{
+       display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .title-section{
+        width: 100%;
+    
+    }
+
+
+    .item-flex{
+        width: 30%;
+        
+    }
+   
+}
+
+/* Form */
+
+
+
+
+
+
+
+
+
+/* Footer */

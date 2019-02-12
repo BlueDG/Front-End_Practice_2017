@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wolf-gang</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="css/wolf-gang.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header-main">
+        <nav class="header-nav">
+            <a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+            <a href=#>Nos produits</a>
+            <a href=#>Nos tarifs</a>
+            <a href=#>Contactez-nous</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="carrousel">
+            <h1 class="title title-main">Devenez le mozart de la moto avec Wolf'<span>gang</span>!</h1>
+                <img src="img/slider/1.jpg" alt="Image motard en pleine course"/>
+                <img src="img/slider/2.jpg" alt="Image motard en pleine course"/>
+                <img src="img/slider/3.jpg" alt="Image motard en pleine course"/>
+        </section><!--fin de la SECTION carrousel-->
+        <section class="shop">
+            <h2 class="title title-section">Découvrez <span>nos motos</span></h2>
+            <?php foreach($motos as $moto) : ?>
+            <article class="item-shop">
+                <img src="img/team/<?php echo $moto[0] ?>" alt="Moto #1"/>
+                <h3 class="item-shop-title"><?= $moto[1] ?></h3>
+                <p><?= $moto[2] ?></p>
+                <a href="#" class="cta">En savoir plus</a>
+            </article>
+            <?php endforeach; ?>
+        </section><!--fin de la SECTION shop-->
+        <section class="details">
+            <h2 class="title title-section">Pour nous connaitre <span>plus en détails</span></h2>
+            <div class="details-links">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorum nostrum iste, tenetur fugiat rem quo cumque consequuntur ducimus soluta doloribus quibusdam quae temporibus totam non. Nemo facere autem, iste porro sunt eveniet ut totam!.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, sint, repellat. Rem nemo dolorem harum nesciunt, voluptates quos vel. Ullam sunt hic aspernatur sit, ratione modi est fugit. Corporis eos, veniam nisi temporibus minus in minima sint omnis vitae saepe, perferendis neque tempore, unde ratione id voluptatem. Eaque harum ut iure consequatur numquam pariatur, minus explicabo. Eum mollitia rem exercitationem.</p>
+                <ul>
+                    <li><i class="fas fa-stroopwafel"></i></li>
+                    <li><i class="fas fa-facebook-square"></i></li>
+                    <li><i class="fas fa-stroopwafel"></i></li>
+                </ul>
+            </div>
+            <video src="video/video.webm" controls></video>
+        </section><!--fin de la SECTION details-->
+    </main>
+    
+    <footer class="footer-main">
+        <h3 class="title-footer">LOREM IPSUM.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, reprehenderit alias voluptas doloribus dolorum repellat quam. Esse neque eum iure maxime nihil ipsam non tempore repudiandae in, magnam quod veniam.</p>
+        <nav class="footer-nav">
+            <a href=#>Home</a>
+            <a href=#>About</a>
+            <a href=#>Clients</a>
+            <a href=#>Contact Us</a>
+        </nav>
+    </footer>
+</body>
+</html>

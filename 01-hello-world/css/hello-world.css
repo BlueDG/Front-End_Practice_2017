@@ -1,0 +1,124 @@
+/*
+une règle css:
+
+voici comment marche une règle css:
+
+1 - sur quel élément je fais ma règle?
+2 - quel est ou sont les propriétés concernées?
+3 - quel est ou sont les valeurs de ces propriétés?
+
+selecteur{
+    propriété1: valeurAlpha;
+    propriété2: valeurBeta;
+    propriété3: valeurGamma;
+}
+*/
+
+
+
+/* règles sur le body: */
+
+body{
+    width: 90%;
+    max-width: 800px;
+    /*margin-left:5%;*/
+    /*margin-right: 5%;*/
+    margin-right: auto;
+    margin-left: auto;
+    /* la largeur doit faire 90% */
+    /* On réparti la marge de manière égale grâce à un % divisé par 2 entre droite et gauche */
+    /* Les enfants de body héritent des propriétés comme la couleur */
+    color:#666;
+    /* font-family: arial; */
+    font-family: 'Playfair Display', serif;
+    line-height:1,4;
+}
+
+/* les images ne doivent pas dépasser la largeur de leur parent */
+
+img{
+    max-width: 100%;
+}
+
+/* la virgule en CSS permet de contrôler plusieurs parties en même temps */
+h1, 
+h2, 
+h3, 
+h4{
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: orange;
+    font-size:38px;
+    line-height:1,3;
+}
+
+a{
+    color: tomato;
+    text-decoration: none;
+}
+
+
+
+nav a{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 32px;
+    line-height: 1,3;
+}
+
+footer a{
+    color:pink;
+}
+
+footer p a{
+    text-decoration: underline;
+}
+
+footer > a{
+    family-font: arial;
+    font-size: 15px;
+    color: hotpink;
+}
+
+/* tu mets footer pour cibler footer, tu peux également mettre footer puis p pour cibler les p de footer.
+si tu mets > puis a par exemple, tu éviteras de modifier ceux qui sont a mais aussi p */
+
+/* je fabrique mon outil réutilisable coloriant en rouge ou autre couleur*/
+.text .warning{
+    color: red;
+}
+.text .info{
+    color: blue;
+}
+.text .success{
+    color: green;
+}
+
+
+.warning-bkg{
+    background-color: lightpink;
+}
+.info-bkg{
+    background-color: lightblue;
+}
+.success-bkg{
+    background-color: lightgreen;
+}
+
+/*
+.bkg .warning{
+    background-color: lightpink;
+}
+.bkg .info{
+    background-color: lightblue;
+}
+.bkg .success{
+    background-color: lightgreen;
+}
+*/

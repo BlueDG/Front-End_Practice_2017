@@ -1,0 +1,23 @@
+- bootstrap nécessite un container faisant la largeur mais aussi un overflow hidden direct. c'est la classe la plus haute, celle qu'on met en premier.
+
+
+- la classe row met de la marge en row à droite et à gauche.
+- pour mettre des choses côte à côté, j'utilise col(c'est quoi, ici, colonne)-xs(de 0 à l'infini.largeur)-6( car 6 sur 12 colonnes max 6/12) pour réaliser 6 colonnes.
+    bootstrap a 4 media queries. 
+    
+    12 c'est le max
+    2 images c'est donc 6
+    3 images c'est 4 (3x4=12)
+    12 = 1 image
+    
+- on peut taper col-sm-4 pour changer l'agencement des images quand l'écran s'grandit a partir d'une certaine largeur d'écran. 
+
+
+offset fait de l'espace vide. tu mets 1 ou 2 qu'importe pour représenter la largeur, le nombre de colonne. pour l'arreter tu as juste à mettre 0.
+
+- glyphicon est comme fa fa-machin. c'est une autre bibliothèque d'icone. cette fois ci pas de font awesome mais de bootstrap.
+
+
+
+    
+    

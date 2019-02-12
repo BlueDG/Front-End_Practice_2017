@@ -1,0 +1,192 @@
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+/* ../ représente un dossier lorsque l'on souhaite ressortir, reculer etc, revenir en arrière */
+
+/* je fais une règle pour tous les éléments html existants */ 
+
+* {
+   box-sizing: border-box 
+}
+
+body{
+    background-image: url(../img/fond.png);
+    background-repeat: repeat; /* default: repeat */
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    /* color: tomato;
+    color: #9ff000; */
+    
+    /* 255x255x255 ce qui signifie 16 million de couleurs.
+    car 255 intensités différentes pour chaque baton.
+    chaque pixel contient un baton rouge, un baton vert et un baton bleu.
+    
+    Les valeurs # vont de 0 à 9 puis de a à f. 
+    exemple: ff0000 signifie intensité à fond sur le rouge puis rien après.
+    
+    une autre manière d'écrire est de faire rgb puis (35, 200, 125) par exemple.
+    le max étant 255 et le minimum 0. */
+    line-height: 1.3;
+    margin: 0;
+    
+    
+}
+
+header img{
+    float: right;
+}
+img{
+    max-width: 100%; /* les img feront en max en largeur la largeur de leurs parents, elles ne dépasseront jamais */
+    /*width: 300px;*/
+}
+
+article img{
+    width: 300px;
+    margin: 0px;
+    /* opacity: 0.5;*/ /* ça varie entre 0 et 1 */
+    float: left;
+    
+} /* on influence les img seulement présentes dans un article; on peut aussi influencer le main en ajoutant main */ 
+
+
+span{
+    background-color: violet;
+    display: block;
+}
+
+em{
+    background-color: lightgrey;
+    display: block;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+nav{
+   font-family: "Oswald", sans-serif; 
+}
+
+
+
+
+header{
+    background-color: #b8cb22;
+    overflow: hidden;
+}
+
+.header-inner{
+    /*background-color: tomato;*/ /* on lui met une couleur histoire de le voir déjà */
+}
+
+main{
+    background-color: white;
+    /*border-top: 4px solid red;*/
+    padding-top: 10px; /*ça c'est une marge intérieure*/
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    clear: both;
+    overflow: hidden;
+}
+
+article{
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 10px;
+    /* remettre l'article à sa place dans le flux html d'avant le float img */ 
+    /* clear: both; */ 
+    /* je demande aux articles de reprendre leur hauteur comme si l'img n'était pas en float */ 
+    overflow: hidden;
+   /* width: 49%; */
+    box-sizing: border-box;
+    /* float: left; */
+   /* margin-right: 2%; */
+
+/* je passe à 100% pour prendre tte la largeur du main*/ 
+    
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+}
+
+
+
+/*menteur*/
+.last{
+    /*margin-right: 0;*/
+}
+
+/* je vise un article sur 2*/ 
+
+ /* article:nth-of-type(2n){
+    margin-right:0;
+} */
+
+article:nth-of-type(3n+1){
+    clear:both;
+}
+
+article:nth-of-type(3n){
+    margin-right:0;
+}
+
+
+p{
+    /*background-color: lightpink;*/
+}
+
+h2{
+    /*margin-top: 0;*/
+    color: #b8cb22;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: -3px;
+    font-size: 2rem; /* un rem c'est 2x le font size du navigateur */ 
+    /*background-color: lightblue;*/
+}
+
+
+nav a{
+    color: #3a4724;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-right: 20px;
+    
+}
+
+nav{
+ margin-top: 50px;
+ display: inline-block;
+}
+
+.cta{
+    background-color: #b8cc23;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    /* display: inline-block;*/
+    float: right;
+}
+
+/* règle spécifique pour en dessous de 768px de largeur d'écran */ 
+
+@media screen and (max-width: 768px){
+    h2{
+    /*margin-top: 0;*/
+    color: lightpink;
+    text-transform: none;
+    }
+    
+   
+}

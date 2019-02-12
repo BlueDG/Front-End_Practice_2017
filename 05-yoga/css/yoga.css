@@ -1,0 +1,459 @@
+/* Code général */ 
+
+*{
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* avant:
+
+h1,
+h3,
+h4,
+nav a{
+    font-family: "Kaushan Script";
+    
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+*/
+
+
+body{
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.container{
+    width: 90%; /* crée afin de ne pas se répéter */ 
+    margin-right: auto; 
+    margin-left: auto;
+    max-width: 1100px;
+}
+
+img{
+    max-width: 100%; /* tu fais ta taille naturelle mais tu dépasses pas ton parent */ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Code pour Header */ 
+
+.header-main{
+    text-align: center;
+    color: white;
+    background-image: url(../img/fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* l'image couvre le header mais attention ça dépassera*/ 
+    background-position: center bottom; /* ainsi l'image sera centrée et visée au bas */ 
+}
+
+.nav-main{
+    padding: 15px 0;
+    font-family: "Kaushan Script";
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.nav-main a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    /* on met du inline block sur le parent a pour que le i prenne 
+    
+    la largeur du a, il faut que le a ait une largeur.
+    
+    donc vu que le nav a est par essence du inline ( sans volume ) on met 
+    
+    le nav a en inline-block afin que l'enfant i (icone) suive sa largeur */ 
+    display: inline-block;
+}
+
+.nav-main i{
+    display: block;
+}
+
+
+.title-site{
+    font-family: "kaushan script", cursive;
+    font-size: 2rem;
+    padding: 5% 30px 20%; 
+    /* une manière responsive afin de garder les mêmes mensurations */
+    /* % en haut , 30px à droite 20% en bas 30px gauche */ 
+}
+
+
+.message{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    margin: 0; /* pour enlever la marge du haut due à la propriété p du message */
+}
+
+/* .title-site{
+    font-size: 2em;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Code pour Main */
+
+main{
+    margin-top: 80px;
+}
+
+.main-content{
+    
+}
+
+/* Code pour intro */
+
+/*.intro{
+    width: 90%; /* pour pas que le texte  touche les bords sauf qu'il faut viser pas le main */
+    /* mais l'intro pour ne pas impacter l'image de details */
+    /*margin-right: auto;*/ /* répartit auto les 10% restants */
+   /* margin-left: auto;
+    max-width: 1100px;
+}*/
+
+
+
+
+/*.item-intro1, .item-intro2{
+    margin-bottom: 20px;
+    overflow: hidden;
+    /*background-color: lightpink;*/
+   /* clear: both;
+    text-align: justify;
+    border-bottom: 1PX solid #ddd;
+    padding-bottom: 30px;
+}*/
+
+/*.item-intro3{
+    margin-bottom: 20px;
+    overflow: hidden;
+    /*background-color: lightpink;*/
+    /*clear: both;
+    text-align: justify;
+    padding-bottom: 30px;
+}*/
+
+
+.item-intro{
+    /*background-color: rgba(0, 0, 0, 0.2); */
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 15px;
+    text-align: justify;
+    border-bottom: 1px solid #222;
+    padding-bottom: 30px;
+
+}
+
+
+.item-intro img{
+    width: 250px;
+    float: left;
+    margin: 0 30px 15px 0;
+}
+
+
+/* je vise un article sur 2, puis je m'occupe de son image */
+.item-intro:nth-of-type(2n) img{
+    float: right;
+    margin: 0 0 15px 30px;
+}
+
+.item-intro:last-of-type{
+    border-bottom: 0;
+}
+
+
+/*.item-intro1 p, .item-intro2 p{
+    overflow: hidden;
+}*/
+
+/*.item-intro1 img{
+    float: left;
+    width: 250px;
+    margin: 0 30px 15px 0;
+    
+}
+
+.item-intro2 img{
+    float: right;
+    width: 250px;
+    margin: 0 0px 0px 30px;
+}*/
+
+
+.title-intro{
+    
+    font-weight: normal;
+    text-align: center;
+    clear: both;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Code pour details */
+
+.details{
+    clear: both;
+    background-image: url(../img/background_section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+    
+    
+}
+
+.details-inner container{
+    background-color: lightpink;
+}
+
+
+/*.details-inner container{
+    width: 90%; /* pour pas que le texte  touche les bords sauf qu'il faut tjrs 
+    que l'image colle les bords */
+    /* mais l'intro pour ne pas impacter l'image de details */
+    /*margin-right: auto;*/ /* répartit auto les 10% restants */
+    /*margin-left: auto;
+    max-width: 1100px;
+}*/
+
+.item-details{
+    color: white;
+    text-align: center;
+    /* là on attaque les trucs côte à côte */
+    width: 33.3333%;
+    
+    display: inline-block;
+    /* il faut enlever aussi l'espace gouttière prédisposé*/
+    /* il existe les commentaires pour faire ça dans l'html*/
+    /* ou avec font-size 0 dans details */ 
+    /* puis rétablissement du font-size initial dans item */ 
+    font-size: initial;
+    /* on finit avec un vertical align top */ 
+    vertical-align: top;
+    
+    /* là on veut espacer les paragraphes */ 
+    /*margin-right: 2%;
+    width:32%;*/
+    /* mais prblm car le dernier sur la droite n'est pas aligné.*/
+    /* ça fait 102% */
+    /* donc il existe: 
+    
+    .item-details:last-of-type{
+    margin-right: 0;
+} */
+
+/* ou alors il existe le padding qui marche grâce au box-sizing. */
+    padding: 15px;
+}
+
+.title-details{
+    font-size: 1.5em;
+}
+
+
+.item-details img{
+    width: 150px;
+    
+}
+
+
+
+
+
+
+/* Code pour map */
+
+.map{
+    
+}
+
+
+.map iframe{
+    width: 100%;
+}
+
+
+/* Code pour footer */
+
+/* responsive rules */ 
+
+@media screen and (max-width: 768px){
+    
+    .item-details{
+        float: none;
+        width: 100%;
+        display: block;
+    }
+    
+    
+}
+
+@media screen and (max-width: 768px){
+    
+    .header-main{
+    text-align: center;
+    color: white;
+    background-image: none;
+    background-color: #9a81d9;
+    }
+    
+    .title-site{
+    font-size: 1.5rem;
+    }
+    
+    .nav-main a{
+        display: block;
+    }
+    
+    .item-intro img{
+        width: 100%;
+        float: none;
+        margin: 0 0 30px 0;
+    }
+    
+    
+    /* je m'occupe de l'autre image */
+    .item-intro:nth-of-type(2n) img{
+        float: none;
+        margin: 0 0 30px 0;
+    }
+}
+
+/**** Table ******/
+
+table{
+    width: 100%;
+    border-collapse: collapse; /* separate */
+}
+
+thead{
+    background-color: #c4a9de;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+tbody{
+    
+}
+
+tfoot{
+    background-color: #c4a9de;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+tbody tr:nth-of-type(2n){
+  background-color: #ddd;  
+    
+}
+
+th{
+   border: 1px solid #bbb; 
+   padding: 1em;
+}
+
+td{
+   border: 1px solid #bbb; 
+   padding: 1em;
+   text-align: center;
+}
+
+form{
+    margin-top: 100px;
+    text-align: center;
+}
+
+fieldset{
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+input{
+    padding: 15px;
+    margin: 10px;
+    border: 0;
+    border-bottom: 1px solid #444;
+}
+
+input[TYPE=SUBMIT]{
+    BACKGROUND-color: lightpink;
+    color: white;
+    text-transform: uppercase;
+    border: 0;
+}
+
+input[class]{
+    background-color: lightblue;
+}
+
+input[required]{
+    background-color: lightgrey;
+}
+
+
+select{ /* select c'est pour la liste de choix */ 
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+
+select option{
+    background-color: lightpink;
+}
+
+
+textarea{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 200px;
+}

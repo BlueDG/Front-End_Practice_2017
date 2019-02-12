@@ -1,0 +1,239 @@
+/* General Rules */
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 100%; /* pour être sûr d'avoir une base de 16px */
+}
+
+
+body{
+    margin: 0; /* le margin 0 va servir à enlever la margin de base entre le bord de l'écran et le contenu */
+    font-family: "Open Sans", sans-serif; /* police la plus utilisée sur la page */ 
+    color: #666; /* couleur la plus commune */ 
+    line-height: 1.4; /* espacement entre les lignes cool de manière générale */ 
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%; /* c'est pour que l'image ne dépasse jamais la largeur de l'élément parent */
+}
+
+
+h1{
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-menu{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    left: -9999em;
+    width: 350px;
+    /*display: none;*/
+    /*transition: 300ms;*/
+    opacity: 0;
+    transition: opacity 300ms;
+    /*z-index: -1;*/
+    /*transform: scaleY(0);
+    transform-origin: top;*/
+}
+
+
+li{
+    position: relative;
+    
+}
+
+
+li:hover .sub-menu{
+    /*display: block;*/
+    /*opacity: 1;*/
+    /*transform: scaleY(1)*/
+    left: 0;
+    opacity: 1;
+}
+
+.sub-menu li{
+    display: block;
+}
+
+
+
+/* Header */ 
+
+
+header{
+    text-align: center;
+}
+
+
+
+header img{
+    /*astuce pour centrer une image dans la largeur de son parent, sans faire de règle spéciale sur ce parent*/
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+header nav{
+    background-color: #37b395;
+    text-align: center;
+}
+
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    /* les a qui ont du volume vont donner du volume aux parents SI ils sont en block */
+    padding: 1.2em;
+    display: block;
+    font-size: 1.5rem;
+    transition: all 300ms;
+    
+}
+
+/* changement de color en passant sur les liens */
+
+header nav a:hover{
+    color: rgba(0, 0, 0, 0.8);
+    
+}
+
+
+
+
+
+
+
+/* main */ 
+
+main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    position: static;
+    
+}
+
+article{
+    position: relative;
+}
+
+
+strong{
+    background-color: lightpink;
+    padding: 2px;
+    color: white;
+    top: 50px;
+    left: 120px;
+    position: absolute;
+}
+
+em{
+    background-color: violet;
+    padding: 2px;
+    color: white;
+    
+}
+
+/* section */ 
+
+/* aside */ 
+
+aside{
+    background-color: #b8dcb1 ;
+    display: none;
+    position: relative;
+}
+
+@media screen and (min-width: 768px){
+    
+    aside{
+        display: block;
+    }
+    
+}
+
+
+@media screen and (min-width: 1024px){
+    
+    header nav a{
+        display: inline-block;
+    
+    }
+    
+    main{
+        font-size: 0;
+    }
+    
+    
+     section{
+        width: 70%;
+        display: inline-block;
+        font-size: initial;
+        vertical-align: top;
+    }
+    
+    aside{
+        width: 30%;
+        display: inline-block;
+        font-size: initial;
+        vertical-align: top;
+    }
+    
+    header{
+        background-color: #37b395;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+    header img{
+        /*astuce pour centrer une image dans la largeur de son parent, sans faire de règle spéciale sur ce parent*/
+        /* display: block;
+        margin-left: auto;
+        margin-right: auto;*/
+        width: 60px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    
+    nav li{
+        display: inline-block;
+    }
+    
+    body{
+        padding-top: 61px;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border: 2px solid lightpink;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    right: -24px;
+}
+
+/* footer */ 

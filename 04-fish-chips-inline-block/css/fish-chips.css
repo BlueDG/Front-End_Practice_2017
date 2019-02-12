@@ -1,0 +1,291 @@
+*{
+   box-sizing: border-box;
+}
+
+img{
+    max-width: 100%; /* ne dépasse pas la largeur de papa: <article class="item-recipe-home"> */
+}
+
+h1,h2,h3,h4{
+    font-family: "Slabo 27px", serif;
+}
+
+.cta {
+    color: white;
+    background-color: #2b9aa0;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+
+.cta i{
+    
+}
+
+body{
+    background-image: url(../img/fond.png);
+    background-color: #87c8c5;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #444; 
+}
+
+
+/* partie du header */ /* transcription de lhtml en css step by step */ 
+
+header{
+    background-color: #25b3B4;
+    border-top: 5px solid #2b9aa0;
+    border-bottom: 5px solid #2b9aa0;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 50px; /* ou padding top de 50px */
+}
+
+.logo{
+    width: 200px;
+}
+
+
+
+header nav{
+    
+}
+
+header nav a{
+    font-family: 'Slabo 27px', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    /*margin-left: 20px;
+    margin-right: 20px;*/
+    background-color: none;
+    padding: 10px;
+}
+
+/* partie du main Welcome */ 
+
+.main-content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    background-color: none;
+    padding: 10px;
+}
+
+.welcome{
+    /*padding-left: ;
+    padding-right: ; */
+    /* margin-left: 100px;
+    margin-right: 100px;*/
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.title-welcome{
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+
+/* 2.2 special */ 
+
+.title-special{
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px /* premièr valeur top/bottom */ 0 /* left and right */ ;
+}
+
+.title-special span{
+    color: #25b3B4;
+}
+
+.special{
+    width: 68%;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    
+}
+
+aside h2{
+    font-family: 'Slabo 27px', serif;
+}
+
+
+p{
+
+}
+
+
+.item-recipe-home{
+    width: 50%;
+    padding: 20px;
+    vertical-align: top;
+    display: inline-block;
+    font-size: initial;
+}
+
+.title-recipe{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* règle pour le cta dans un contexte ou endroit spécifique */ 
+.item-recipe-home .cta{
+    float: right;
+}
+
+
+.title-recipe .fas{
+    color: #25b3B4;
+    font-size: 1.3rem;
+}
+
+.item-recipe-home img{
+    float: left;
+    margin-right: 20px;
+    /*border-radius: 50%;*/
+    width: 120px;
+}
+
+.news{
+    background-color: #25b3b4;
+    border: 5px solid #2b9aa0;
+    width: 30%;
+    padding: 20px;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.title-news{
+    
+}
+
+.title-news span{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.news img{
+    float: right;
+    margin-top: -75px;
+    margin-right: -75px;
+}
+
+.news ul{
+    list-style-type: none; /* on enlève les points de l'ul */ 
+    padding: 0;
+}
+
+.news p{
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.news-date{
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
+h1{
+    font-size: ;
+    font-family: 'Slabo 27px', serif;
+    color: #444;
+}
+
+
+/* partie du main Special */ 
+
+
+
+
+
+h3{
+    font-family: 'Slabo 27px', serif;
+}
+
+
+
+/* footerpart */ 
+
+footer{
+    clear: both;
+}
+
+
+
+
+/*****  4.0 Responsive rules*********/
+
+
+@media screen and (max-width: 1024px){
+    /* règles pour en dessous de 1024px de largeur écran : */
+        
+    .special{
+        width: 100%;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 80px;
+        
+    }
+        
+    .news{
+        /*background-color: olive;*/
+        width: 100%;
+        display: block;
+       
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+        
+    .item-recipe-home{
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .news img{
+        display: none;
+    }
+        
+    .title-news{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    
+}
+
+@media screen and (max-width: 480px){
+    
+    .item-recipe-home img{
+        float: none;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+       /* border-radius: 50%;*/
+    }
+    
+     .header-top .header-nav a{
+        /*border: 2px solid Black;
+        color: red;*/
+        display: block;
+    }
+
+
+    
+}

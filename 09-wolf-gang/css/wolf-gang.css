@@ -1,0 +1,363 @@
+/* on part dans une stratégie mobile first */ 
+
+
+/*************** general rules ***************/
+
+@font-face { /* ça c'est l'insertion via url d'un font*/ 
+ font-family: "Bodega Sans";
+ src: url("../fonts/BodegaSans_Black.ttf");
+}
+
+h1,h2{
+    font-family: "Bodega Sans", arial, Sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    border-top: 2px solid #434242;
+    padding-top: 20px;
+    border-left: 2px solid #434242;
+    padding-left: 20px;
+}
+
+
+
+img,
+video,
+iframe{
+    max-width: 100%;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%; /* pour être sûr d'avoir une base de 16px */ /* 1 rem=16px*/
+}
+
+body{
+    margin: 0; /* le margin 0 va servir à enlever la margin de base entre le bord de l'écran et le contenu */
+    font-family: arial, sans-serif; /* police la plus utilisée sur la page */ 
+    color: #666; /* couleur la plus commune */ 
+    line-height: 1.4; /* espacement entre les lignes cool de manière générale */
+    background-image: url(../img/bg_body.svg); /* petits casques*/
+    background-color: #4a4949;
+    padding: 20px; /* on crée une zone interdite pour pas toucher les bords */
+}
+
+img{
+    max-width: 100%;
+}
+
+.cta{
+    color: white;
+    padding: 10px;
+    background-color: #ff9d00;
+    text-decoration: none;
+    text-align: center;
+    max-width: 100%;
+    display: block;
+}
+
+
+/* corrections */
+/* classe pour style général qui gère la couleur car la couleur est la même partout*/
+.title{
+    color: white;
+    
+}
+
+
+/* classes pour style différent ou particulier */
+.title span{
+    color: #ff9d00;
+}
+
+
+.title-main{
+    text-align: center;
+    font-size: 2.7rem;
+}
+
+
+.title-section{
+    font-size: 2rem;
+    border-top: 2px solid #555;
+    border-left: 2px solid #555;
+    padding: 0.5em;
+}
+
+/* corrections*/
+/*************** header ***************/
+
+.header-main{
+    font-family: "Bodega Sans", arial, Sans-serif;
+    background: linear-gradient(
+      340deg,
+      #333 0%,
+      #333 50%, /* le % équivaut à la longueur de la zone peinte */
+      white 50%,
+      white 100%
+    
+    
+    ); /* pour un dégradé linéaire */
+}
+
+.header-nav{
+    
+}
+
+/* 100 + 100pts */
+.header-nav .logo{
+    text-align: center;
+}
+
+
+/* 100pt + 1pt */ 
+.header-nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem; /* 16* 1.4 = 22 */
+    display: block;
+    text-align: right;
+    padding: 0.8em; /* 22 * 0.8 = 20 px*/
+}
+
+
+/************** main ***************/
+
+
+h1 span, h2  span{
+    color: orange;
+}
+
+
+.carrousel img{
+    border: 5px solid white;
+}
+
+
+
+
+/*************** section moto-description ***************/
+
+.item-shop{
+    background-color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    /* margin-right: 10px;*/
+}
+
+article h3{
+    color: #ff9d00;
+}
+
+.item-shop-title{
+    color: #ff9d00;
+    border-bottom: 2px solid orange;
+    padding-bottom: 10px;
+    font-family: "Bodega Sans", arial, Sans-serif;
+    font-weight: normal;
+}
+
+
+
+.item-shop.cta{
+    display: block;
+}
+
+
+
+/*************** section details ***************/
+
+
+/*************** corrections ****************/
+
+.details{
+    text-align: center;
+    color: white;
+}
+
+.details-links{
+    
+}
+.details-links ul{
+    list-style: none;
+    padding: 0;
+}
+
+.details-links li{
+    margin-bottom: 20px;
+}
+
+.details-links i{
+    font-size: 3rem;
+}
+
+.details video{
+    
+}
+
+
+/**************** corrections ********************/
+
+.details p{
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+    text-align: center;
+}
+
+.icones{
+    color: white;
+    text-align: center;
+    line-height: 3;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+
+
+
+/*************** footer ***************/
+
+/********************* corrections ****************************/
+
+
+.footer-main{
+    margin-top: 50px;
+    padding: 30px;
+    /*décalage X, décale Y, flou, étalement, couleur*/
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.title-footer{
+    font-size: 1.8rem;
+}
+
+
+
+.footer-nav{
+    
+}
+
+.footer-nav a{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    margin: 1em;
+    display: inline-block;
+}
+
+
+/***************** corrections ************************/ 
+
+
+.footer{
+    margin-top: 50px;
+    padding: 30px;
+    /*décalage X, décale Y, flou, étalement, couleur*/
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
+    color: lightgrey;
+    text-align: center;
+}
+
+
+.footer-nav{
+    text-align: center;
+}
+
+
+.footer-nav a{
+    text-decoration: none;
+    color: lightgrey;
+    text-decoration: underline;
+    
+}
+
+
+
+.footer-title{
+    font-family: "Bodega Sans", arial, Sans-serif;
+    font-weight: normal;
+    color: lightgrey;
+    text-align: center;
+}
+
+
+
+
+/*********************** Responsive ***********************/
+
+
+
+@media screen and (min-width: 768px){
+    
+    .header-main{
+        position: relative;
+    }
+    
+    .header-nav .logo{
+        position: absolute;
+        top: 15px;
+        left: 0px;
+    }
+    
+    .shop{
+        font-size: 0;
+    }
+    
+    .item-shop{
+        margin-bottom: 30px;
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+        font-size: initial;
+        margin-right: 2%;
+        /* 49+2 +49+2 = 102 */ 
+    }
+    
+    .item-shop:nth-of-type(2n){
+        margin-right: 0;
+    }
+    
+    
+
+}
+
+
+@media screen and (min-width: 1024px){
+    
+    .item-shop{
+        margin-bottom: 30px;
+        width: 24%;
+        margin-right: 1.33%;
+        /* 4x24+ 96; il reste 4% à diviser par 3 pour 3 gouttières;*/
+        /* 3= 1.33 */
+    }
+    
+    .item-shop:nth-of-type(2n){
+        margin-right: 1.33%;
+    }
+    
+    .item-shop:nth-of-type(4n){
+        margin-right: 0;
+    }
+}
+
+
+
+

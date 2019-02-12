@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>Yoga</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="css/yoga.css" rel="stylesheet">
+</head>    
+    
+<body>
+    
+    <header class="header-main">
+        <nav class="nav-main">
+            <a href="index.html"><i class="far fa-calendar-alt"></i>Accueil</a>
+            <a href=""><i class="fas fa-book"></i>Livre d'or</a>
+            <a href=""><i class="far fa-image"></i>Album photo</a>
+            <a href="contact.html"><i class="far fa-envelope"></i>Contact</a>
+        </nav>
+        <p class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sapiente!</p>
+        <h1 class="title-site">Bienvenue sur le site d'Ila Yoga</h1>
+    </header>
+    <main class="main-content container">
+        
+        <table>
+            
+            
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Stan</th>
+                    <th>David</th>
+                    <th>Tom</th>
+                    <th>Bertrand</th>
+                    
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>654 182€</th>
+                    <th>123 895€</th>
+                    <th>54 774€</th>
+                    <th>783 630€</th>
+                </tr>
+                
+            </tfoot>
+            
+            <tbody>
+                <tr>
+                    <th>2018</th>
+                    <td>48 321€</td>
+                    <td>65 845€</td>
+                    <td>654 123€</td>
+                    <td>21 884€</td>
+                </tr>
+                <tr>
+                    <th>2017</th>
+                    <td colspan="2">54 892€</td>
+                    <td>14 231€</td>
+                    <td>4 745€</td>
+                    
+                </tr>
+                <tr>
+                    <th>2016</th>
+                    <td>3 485€</td>
+                    <td>68 852€</td>
+                    <td>563 000€</td>
+                    <td>874 256€</td>
+                </tr>
+                <tr>
+                    <th>2015</th>
+                    <td>5 239€</td>
+                    <td>74 478€</td>
+                    <td>1 781€</td>
+                    <td>98 685€</td>
+                </tr>
+                
+            </tbody>
+        
+        </table>
+        
+        
+        <form><!-- les input css correspondent aux cases à cocher -->
+            
+            <fieldset> <!-- fieldset sert à réunir plusieurs champs qui s'accordent les uns les autres -->
+                <legend>Vos coordonnées</legend>
+                <label>Votre prénom: </label> <!-- label est ce qui est affiché à l'écran -->
+                <input class="" type="text" name="prenom" placeholder="Votre prénom" id="prénom">
+                <label>Votre nom: </label>
+                <input class= "" type="text" name="nom" placeholder="Votre nom" id="nom" required> <!-- ajouter required permet de forcer la personne à remplir ce champ -->
+                <input type="email" name="email" placeholder="Votre courriel" id="email">  
+            </fieldset>
+            
+            <input type="date" name="birth-date" placeholder="date de naissance">
+            <input type="number" placeholder="quantité souhaitée" min="0" max="50">
+            
+            <fieldset>
+            <legend>Raisons de votre venue</legend> <!-- checkbox signifie carrés àcocher donc plusieurs  possibles -->
+            <label for="relax">Besoin de me détendre</label>
+            <input type="checkbox" name="relax" id="relax">
+            <label for="moi">Besoin de moi</label>
+            <input type="checkbox" name="moi" id="moi">
+            <label for="toi">Besoin de toi</label>
+            <input type="checkbox" name="toi" id="toi">
+            </fieldset>
+            
+            <fieldset>
+            <legend>Voulez-vous souscrire à notre newsletter ?</legend>
+            <label for="nl-yes">Oui</label>
+            <input type="radio" name="newsletter" id="nl-yes" value="nl-yes">
+            <label for="nl-no">Non</label>
+            <input type="radio" name="newsletter" id="nl-no" value="nl-no">
+            <label for="nl-later">Plus tard</label>
+            <input type="radio" name="newsletter" id="nl-later" value="nl-later"> <!-- radio signifie ronds à cocher donc un seulement possible -->
+            </fieldset>
+            
+            <fieldset>
+                <legend>Sur quel continent êtes vous né ?</legend>
+                <select name="continent" id="continent">
+                    <option value="asie">Asie</option>
+                    <option value="amérique">Amérique</option>
+                    <option value="afrique">Afrique</option>
+                    <option value="océanie">Océanie</option>
+                    <option value="europe">Europe</option>
+                    <option value="antarctique">Antarctique</option>
+                </select>
+            </fieldset>
+            
+            
+            <fieldset>
+                <legend></legend>
+                <textarea name="message" id="message" placeholder="votre message"></textarea>
+            </fieldset>
+            
+            
+            
+            
+            <!--<button type="submit">Envoyer</button-->
+            <input type="submit" value="Envoyez le formulaire">
+        </form>
+        
+        
+        
+        
+        
+        
+        
+        
+    </main>
+    <footer class="footer-main">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas harum dignissimos veritatis, deserunt officiis illum vel <a href="">voluptatum aspernatur atque animi</a> nihil mollitia praesentium sit, nesciunt in voluptates corrupti at soluta dolorem a. Quos, a, consectetur.</p>
+    </footer>
+    
+    
+</body>    
+</html>
